@@ -1,0 +1,13 @@
+<br>
+<sly data-sly-use.model="com.aem.myproject.sling.models.Test" />
+
+<h4><u>List of Page Children</u></h4>
+
+<div data-sly-test="${model.pageChild.size > 0}">
+  <ul data-sly-list.pages="${model.pageChild}" data-sly-unwrap>
+    <li>${pages.name}</li>
+  </ul>
+</div>
+<div data-sly-test="${model.pageChild.size == 0}">
+  <p>Path of page is not valid</p>
+</div>

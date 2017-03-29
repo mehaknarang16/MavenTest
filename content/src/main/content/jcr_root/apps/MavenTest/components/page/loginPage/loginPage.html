@@ -1,0 +1,15 @@
+<html>
+<body>
+<h2>Login</h2>
+<br>
+
+<sly data-sly-test.var="${currentPage.path}"+"/j_mycustom_security_check">
+var====${var}
+<form method="POST" action=var> 
+Enter User Name: <input  name="j_username" type="text" />
+Enter Passord: <input  name="j_password" type="text" />
+<input type="button" name="Click Here to login">
+</form>
+
+</body>
+</html>

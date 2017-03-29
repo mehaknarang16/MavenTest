@@ -1,0 +1,15 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.all @ categories='mavenTest'}"/>
+
+
+<form action="${Resource.path}.html" method="POST">
+    <label><b>New Password</b></label>
+    <input name="passwordreset" type="password" placeholder="New Password" autocomplete="off" required>
+
+    <label><b>Confirm Password</b></label>
+    <input name="passwordreset_confirm" type="password" placeholder="Confirm Password" autocomplete="off" required>
+    <input name="ky" value="${request.requestParameterMap['ky'][0].toString}" type="hidden" />
+
+    <button type="submit">Reset Password</button>
+</form>
